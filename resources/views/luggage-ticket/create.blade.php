@@ -2,7 +2,7 @@
 @section('title', 'Create luggage ticket')
 @section('content')
     <section>
-        <form method="POST" action=" {{ route('store-ticket') }}" class="mx-auto max-w-2xl">
+        <form method="POST" action=" {{ route('store-ticket') }}" class="mx-auto max-w-xl">
             <div>
                 <p class="mb-3 text-[28px] font-semibold dark:text-zinc-50">Create a ticket</p>
             </div>

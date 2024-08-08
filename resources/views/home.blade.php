@@ -2,7 +2,7 @@
 @section('title', 'Home')
 @section('content')
     <section id="main" class="flex flex-col items-center justify-center">
-        <div class="mb-6 flex w-1/2 flex-col">
+        <div class="mb-6 w-full">
             <!-- head text -->
             <div class="mb-5">
                 <p class="mb-3 text-[28px] font-semibold dark:text-zinc-50">Search tickets</p>
@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="relative mb-5 w-1/2 overflow-x-auto">
+        <div class="relative mb-5 w-full overflow-x-auto">
             <div class="mb-5">
                 <p class="text-[28px] font-semibold dark:text-zinc-50">All tickets</p>
             </div>
@@ -73,19 +73,18 @@
                     @endforeach
                 </tbody>
             </table>
-            <button
-                type="button"
-                class="mb-2 me-2 self-start rounded-lg bg-zinc-800 px-5 py-2.5 text-sm font-bold text-white hover:bg-zinc-900 focus:outline-none focus:ring-4 focus:ring-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"
-            >
-                <a href="{{ route('create-ticket') }}">Create ticket</a>
-            </button>
-
-            {{-- code to show success alert when data is sent to database --}}
-            @if (session('success'))
-                <script>
-                    alert('{{ session('success') }}');
-                </script>
-            @endif
         </div>
+        <button
+            type="button"
+            class="mb-2 me-2 self-start rounded-lg bg-zinc-800 px-5 py-2.5 text-sm font-bold text-white hover:bg-zinc-900 focus:outline-none focus:ring-4 focus:ring-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"
+        >
+            <a href="{{ route('create-ticket') }}">Create ticket</a>
+        </button>
+        {{-- code to show success alert when data is sent to database --}}
+        @if (session('success'))
+            <script>
+                alert('{{ session('success') }}');
+            </script>
+        @endif
     </section>
 @endsection
