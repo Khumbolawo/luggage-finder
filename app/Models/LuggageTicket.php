@@ -9,9 +9,10 @@ class LuggageTicket extends Model
 {
     protected $fillable = [
         'name',
+        'last_name',
         'email',
-        'phone_number',
-        'ticket_number',
-        'number_of_luggage_pieces',
+        'phone',
+        'ticket_no',
+        'luggage',
     ];
 }

@@ -15,7 +15,7 @@
                         <li
                             class="text-[36px] font-bold hover:text-zinc-700 dark:text-zinc-50 dark:hover:text-zinc-300"
                         >
-                            <a href="#">Luggage Finder</a>
+                            <a href="{{ route('home') }}">Luggage Finder</a>
                         </li>
                         <li>
                             <a href="{{ route('create-ticket') }}" class="hover:text-zinc-700 dark:text-zinc-50 dark:hover:text-zinc-300">

@@ -10,8 +10,19 @@
             <div class="mb-5">
                 <label for="name" class="mb-2 block text-sm font-medium text-zinc-900 dark:text-white">Your name</label>
                 <input
+                    name="name"
                     type="text"
                     id="name"
+                    class="block w-full rounded-lg border border-zinc-300 bg-zinc-50 p-2.5 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-zinc-500 dark:focus:ring-zinc-500"
+                    required
+                />
+            </div>
+            <div class="mb-5">
+                <label for="last_name" class="mb-2 block text-sm font-medium text-zinc-900 dark:text-white">Your last name</label>
+                <input
+                    name="last_name"
+                    type="text"
+                    id="last_name"
                     class="block w-full rounded-lg border border-zinc-300 bg-zinc-50 p-2.5 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-zinc-500 dark:focus:ring-zinc-500"
                     required
                 />
@@ -21,6 +32,7 @@
                     Your email
                 </label>
                 <input
+                    name="email"
                     type="email"
                     id="email"
                     class="block w-full rounded-lg border border-zinc-300 bg-zinc-50 p-2.5 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-zinc-500 dark:focus:ring-zinc-500"
@@ -33,6 +45,7 @@
                     Your phone number
                 </label>
                 <input
+                    name="phone"
                     type="text"
                     id="phone-number"
                     class="block w-full rounded-lg border border-zinc-300 bg-zinc-50 p-2.5 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-zinc-500 dark:focus:ring-zinc-500"
@@ -44,6 +57,7 @@
                     Your ticket number
                 </label>
                 <input
+                    name="ticket_no"
                     type="text"
                     id="ticket-number"
                     class="block w-full rounded-lg border border-zinc-300 bg-zinc-50 p-2.5 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-zinc-500 dark:focus:ring-zinc-500"
@@ -55,6 +69,7 @@
                     Your number of pieces
                 </label>
                 <input
+                    name="luggage"
                     type="number"
                     id="number-of-pieces"
                     class="block w-full rounded-lg border border-zinc-300 bg-zinc-50 p-2.5 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-zinc-500 dark:focus:ring-zinc-500"

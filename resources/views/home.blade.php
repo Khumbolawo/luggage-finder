@@ -59,6 +59,13 @@
             >
                 <a href="{{ route('create-ticket') }}">Create ticket</a>
             </button>
+
+            {{-- code to show success alert when data is sent to database --}}
+            @if (session('success'))
+                <script>
+                    alert('{{ session('success') }}');
+                </script>
+            @endif
         </div>
     </section>
 @endsection
