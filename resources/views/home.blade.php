@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Home')
 @section('content')
     <section id="main" class="flex flex-col items-center justify-center">
         <div class="mb-6 flex w-1/2 flex-col">
@@ -56,7 +57,7 @@
                 type="button"
                 class="mb-2 me-2 self-start rounded-lg bg-zinc-800 px-5 py-2.5 text-sm font-bold text-white hover:bg-zinc-900 focus:outline-none focus:ring-4 focus:ring-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"
             >
-                Create ticket
+                <a href="{{ route('create-ticket') }}">Create ticket</a>
             </button>
         </div>
     </section>
