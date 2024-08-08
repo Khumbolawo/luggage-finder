@@ -37,21 +37,41 @@
             </div>
         </div>
 
-        <div class="relative mb-5 w-1/2">
+        <div class="relative mb-5 w-1/2 overflow-x-auto">
             <div class="mb-5">
                 <p class="text-[28px] font-semibold dark:text-zinc-50">All tickets</p>
             </div>
-            <table
-                class="mb-10 w-full overflow-x-auto bg-zinc-100 text-xs uppercase shadow-md sm:rounded-lg dark:bg-zinc-700 dark:text-zinc-50"
-            >
-                <thead>
+            <table class="mb-10 w-full text-left text-sm text-zinc-500 rtl:text-right dark:text-zinc-400">
+                <thead class="text-xs uppercase text-zinc-900 dark:text-zinc-400">
                     <tr>
-                        <th class="px-6 py-3">Ticket Number</th>
-                        <th class="px-6 py-3">Customer</th>
-                        <th class="px-6 py-3">Number of pieces</th>
-                        <th class="px-6 py-3">QR Code</th>
+                        <th scope="col" class="px-6 py-3">Ticket Number</th>
+                        <th scope="col" class="px-6 py-3">First Name</th>
+                        <th scope="col" class="px-6 py-3">Last Name</th>
+                        <th scope="col" class="px-6 py-3">Number of pieces</th>
+                        <th scope="col" class="px-6 py-3">QR Code</th>
                     </tr>
                 </thead>
+                <tbody>
+                    @foreach ($tickets as $ticket)
+                        <tr class="bg-white dark:bg-zinc-800">
+                            <td class="px-6 py-4">
+                                {{ $ticket->ticket_no }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $ticket->name }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $ticket->last_name }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $ticket->luggage }}
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#">link</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
             </table>
             <button
                 type="button"
