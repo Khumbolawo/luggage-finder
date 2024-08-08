@@ -7,22 +7,32 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="mx-auto dark:bg-zinc-900">
+        <!-- header -->
         <section id="header">
             <nav class="mb-7 mt-7">
                 <div>
                     <ul class="flex items-center justify-around">
-                        <li class="text-[36px] font-bold hover:text-zinc-700 dark:text-zinc-50"><a href="#">Luggage Finder</a></li>
-                        <li><a href="#" class="hover:text-zinc-700 dark:text-zinc-50">Create ticket</a></li>
+                        <li
+                            class="text-[36px] font-bold hover:text-zinc-700 dark:text-zinc-50 dark:hover:text-zinc-300"
+                        >
+                            <a href="#">Luggage Finder</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-zinc-700 dark:text-zinc-50 dark:hover:text-zinc-300">
+                                Create ticket
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </section>
-        <section id="main" class="flex flex-col justify-center items-center">
-            <div class="w-1/2 flex flex-col">
+        <section id="main" class="flex flex-col items-center justify-center">
+            <div class="mb-6 flex w-1/2 flex-col">
                 <!-- head text -->
-                 <div class="mb-5">
-                    <p class="font-semibold text-[28px] dark:text-zinc-50">Search tickets</p>
-                 </div>
+                <div class="mb-5">
+                    <p class="mb-3 text-[28px] font-semibold dark:text-zinc-50">Search tickets</p>
+                    <p class="dark:text-zinc-300">Search by surname or ticket number</p>
+                </div>
                 <!-- searchbar -->
                 <div class="relative">
                     <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
@@ -51,25 +61,29 @@
                     />
                 </div>
             </div>
-            <div>
-                <table class="dark:text-zinc-50">
+
+            <div class="relative mb-5 w-1/2">
+                <div class="mb-5">
+                    <p class="text-[28px] font-semibold dark:text-zinc-50">All tickets</p>
+                </div>
+                <table
+                    class="w-full overflow-x-auto bg-zinc-100 text-xs uppercase shadow-md mb-10 sm:rounded-lg dark:bg-zinc-700 dark:text-zinc-50"
+                >
                     <thead>
                         <tr>
-                            <th class="px-6 py-3">
-                                Ticket Number
-                            </th>
-                            <th class="px-6 py-3">
-                                Customer 
-                            </th>
-                            <th class="px-6 py-3">
-                                Number of pieces
-                            </th>
-                            <th class="px-6 py-3">
-                                QR Code
-                            </th>
+                            <th class="px-6 py-3">Ticket Number</th>
+                            <th class="px-6 py-3">Customer</th>
+                            <th class="px-6 py-3">Number of pieces</th>
+                            <th class="px-6 py-3">QR Code</th>
                         </tr>
                     </thead>
                 </table>
+                <button
+                    type="button"
+                    class="mb-2 me-2 self-start rounded-lg bg-zinc-800 px-5 py-2.5 text-sm font-bold text-white hover:bg-zinc-900 focus:outline-none focus:ring-4 focus:ring-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"
+                >
+                    Create ticket
+                </button>
             </div>
         </section>
     </body>
