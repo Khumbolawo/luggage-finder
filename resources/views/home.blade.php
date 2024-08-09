@@ -9,32 +9,44 @@
                 <p class="dark:text-zinc-300">Search by surname or ticket number</p>
             </div>
             <!-- searchbar -->
-            <div class="relative">
-                <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
-                    <svg
-                        class="h-4 w-4 text-zinc-500 dark:text-zinc-400"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 20 20"
+
+            <form class="mx-auto" action="{{ route('search-ticket') }}" method="GET">
+                <label for="search" class="sr-only mb-2 text-sm font-medium text-zinc-900 dark:text-white">
+                    Search
+                </label>
+                <div class="relative">
+                    <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
+                        <svg
+                            class="h-4 w-4 text-zinc-500 dark:text-zinc-400"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                            />
+                        </svg>
+                    </div>
+                    <input
+                        type="text"
+                        name="search"
+                        class="block w-full rounded-lg border border-zinc-300 bg-zinc-50 p-4 ps-10 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-zinc-500 dark:focus:ring-zinc-500"
+                        placeholder="Search Tickets"
+                        required
+                    />
+                    <button
+                        type="submit"
+                        class="absolute bottom-2.5 end-2.5 rounded-lg bg-zinc-700 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800 focus:outline-none focus:ring-4 focus:ring-zinc-300 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800"
                     >
-                        <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                        />
-                    </svg>
-                    <span class="sr-only">Search icon</span>
+                        Search
+                    </button>
                 </div>
-                <input
-                    type="text"
-                    id="search-navbar"
-                    class="block w-full rounded-lg border border-zinc-300 bg-zinc-50 p-2 ps-10 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:placeholder-zinc-400 dark:focus:border-zinc-500 dark:focus:ring-zinc-500"
-                    placeholder="Search..."
-                />
-            </div>
+            </form>
         </div>
 
         <div class="relative mb-5 w-full overflow-x-auto">
@@ -67,7 +79,7 @@
                                 {{ $ticket->luggage }}
                             </td>
                             <td class="px-6 py-4">
-                                <a href="#">link</a>
+                                <a class="dark:hover:text-zinc-50" href="#">link</a>
                             </td>
                         </tr>
                     @endforeach

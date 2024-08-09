@@ -12,4 +12,5 @@ class MainController extends Controller
         $tickets = LuggageTicket::all();
         return view('home', compact('tickets'));
     }
+
 }
