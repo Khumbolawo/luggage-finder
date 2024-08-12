@@ -14,5 +14,6 @@ class LuggageTicket extends Model
         'phone',
         'ticket_no',
         'luggage',
+        'qr_code',
     ];
 }

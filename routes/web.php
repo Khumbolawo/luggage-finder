@@ -14,4 +14,5 @@ Route::get('/', [MainController::class, 'index'])->name('home');
 Route::get('/create-ticket', [LuggageTicketController::class, 'create'])->name('create-ticket');
 Route::post('/create-ticket', [LuggageTicketController::class, 'store'])->name('store-ticket');
 Route::get('/search-ticket', [SearchController::class, 'search'])->name('search-ticket');
+Route::get('/ticket/{ticket}', [LuggageTicketController::class, 'show'])->name('ticket-summary');
 

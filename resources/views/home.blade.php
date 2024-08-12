@@ -79,7 +79,7 @@
                                 {{ $ticket->luggage }}
                             </td>
                             <td class="px-6 py-4">
-                                <a class="dark:hover:text-zinc-50" href="#">link</a>
+                                <a class="dark:hover:text-zinc-50" href="{{ route('ticket-summary') }}">link</a>
                             </td>
                         </tr>
                     @endforeach
