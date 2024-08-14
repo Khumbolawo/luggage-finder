@@ -2,4 +2,5 @@ simple-qrcode
 tailwindcss
 flowbitejs
 latest php
-mysql
+MySQL
+imagick

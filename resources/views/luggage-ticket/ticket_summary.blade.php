@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'summary')
 @section('content')
-    <section>
+    <section class="flex flex-wrap justify-start gap-4 md:justify-around  mt-10 ">
         <div>
             <h2 class="text-[28px] font-semibold dark:text-zinc-50">Ticket Summary</h2>
             <p class="my-2 dark:text-zinc-50">
@@ -20,9 +20,10 @@
                 <strong>Number of luggage pieces:</strong>
                 {{ $ticket->luggage }}
             </p>
-            <div>
-                {!! $qrcode !!}
-            </div>
+            
+        </div>
+        <div>
+            {!! $qrcode !!}
         </div>
     </section>
 @endsection

@@ -37,7 +37,7 @@ class LuggageTicketController extends Controller
     }
 
     public function show (LuggageTicket $ticket){
-        $qrcode = QrCode::size(200)->generate($ticket->id);
+        $qrcode = $ticket->qr_code;
 
         return view('luggage-ticket.ticket_summary', compact('ticket', 'qrcode'));
     }
