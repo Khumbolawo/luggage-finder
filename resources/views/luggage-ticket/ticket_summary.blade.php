@@ -22,8 +22,8 @@
             </p>
             
         </div>
-        <div>
-            {!! $qrcode !!}
+        <div class="w-[250px] h-[250px] flex items-center justify-center dark:bg-white">
+            {!! $ticket->qr_code !!}
         </div>
     </section>
 @endsection

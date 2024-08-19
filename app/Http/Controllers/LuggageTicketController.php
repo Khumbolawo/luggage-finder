@@ -28,8 +28,13 @@ class LuggageTicketController extends Controller
         //method that actually sends data to database im assuming
         $luggageTicket = LuggageTicket::create($validatedData);
 
-        $qrcode = QrCode::size(200)->generate($luggageTicket->id);
-        //saving the created qr code into a qrcode field in the database
+        //storing summary url in a variable to encode to the qrcode
+        $summaryURL = route('ticket-summary', ['ticket' => $luggageTicket->id]);
+
+        Log::info('Generated URL: ' . $summaryURL);
+
+        $qrcode = QrCode::size(200)->generate($summaryURL);
+        //saving the created qr code into a qrcode field in the database as an svg image file
         $luggageTicket->qr_code = $qrcode;
         $luggageTicket->save();
         //sends user to ticket summary page with qrcode 
